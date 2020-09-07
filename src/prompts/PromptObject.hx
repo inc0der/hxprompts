@@ -1,5 +1,8 @@
 package prompts;
 
+import js.node.stream.Writable.IWritable;
+import js.node.stream.Readable.IReadable;
+
 typedef PromptObject<T> = {
 	var type : Null<ts.AnyOf3<Bool, String, PrevCaller<T, Null<ts.AnyOf2<Bool, String>>>>>;
 	var name : ValueOrFunc<T>;
@@ -42,7 +45,7 @@ typedef PromptObject<T> = {
 	@:optional
 	var mask : String;
 	@:optional
-	var stdout : node.stream.Writable;
+	var stdout : IWritable;
 	@:optional
-	var stdin : node.stream.Readable;
+	var stdin : IReadable;
 };
