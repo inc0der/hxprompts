@@ -1,0 +1,19 @@
+{
+  "name": "hxprompts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npx dts2hx prompts",
+    "build": "npx dts2hx prompts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^14.6.4",
+    "@types/prompts": "^2.0.8"
+  },
+  "devDependencies": {
+    "dts2hx": "^0.13.3"
+  }
+}
