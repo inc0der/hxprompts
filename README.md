@@ -1,5 +1,9 @@
 # Haxe Externs for prompts
 
+<p align="center">
+  <img src="https://github.com/terkelg/prompts/raw/master/prompts.png" alt="Prompts" width="500" href="https://github.com/terkelg/prompts" />
+</p>
+
 Generated from **[@types/prompts v2.0.8](https://github.com/DefinitelyTyped/DefinitelyTyped#readme)** by **[dts2hx](https://github.com/haxiomic/dts2hx)**
 
 ## Dependencies
