@@ -1,4 +1,4 @@
-@:jsRequire("prompts") @valueModuleOnly extern class Prompts {
+@:jsRequire("prompts") @valueModuleOnly extern class PromptsHx {
 	@:selfCall
 	static function call<T>(questions:ts.AnyOf2<prompts.PromptObject<T>, Array<prompts.PromptObject<T>>>, ?options:prompts.Options):js.lib.Promise<{ }>;
 	static function inject(arr:haxe.ds.ReadOnlyArray<Dynamic>):Void;
