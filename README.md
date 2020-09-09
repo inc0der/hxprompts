@@ -4,7 +4,7 @@
   <img src="logo.png" alt="Prompts" width="500" href="https://github.com/terkelg/prompts" />
 </p>
 
-Generated from **[@types/prompts v2.0.8](https://github.com/DefinitelyTyped/DefinitelyTyped#readme)** by **[dts2hx](https://github.com/haxiomic/dts2hx)**
+Generated from **[@types/prompts v2.0.8](https://github.com/DefinitelyTyped/DefinitelyTyped#readme)** by **[dts2hx](https://github.com/haxiomic/dts2hx)** modified and maintained by [@inc0der](https://github.com/inc0der) for use in [@LunaTechsDev](https://github.com/LunatechsDev/) organization
 
 ## What is Prompts?
 
