@@ -22,6 +22,19 @@ Generated from **[@types/prompts v2.0.8](https://github.com/DefinitelyTyped/Defi
 ## Dependencies
 - [hxnodejs](https://github.com/HaxeFoundation/hxnodejs)
 
+## Installation
+
+With lix:
+```
+lix install gh:inc0der/hxprompts
+```
+
+With Haxelib
+
+```
+haxelib git hxprompts https://github.com/inc0der/hxprompts.git master
+```
+
 ## Example
 
 ```js
