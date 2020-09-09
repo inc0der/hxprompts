@@ -6,14 +6,9 @@
 
 Generated from **[@types/prompts v2.0.8](https://github.com/DefinitelyTyped/DefinitelyTyped#readme)** by **[dts2hx](https://github.com/haxiomic/dts2hx)**
 
-## Dependencies
-- hxnodejs
-
 ## What is Prompts?
-GitHub: https://github.com/terkelg/prompts#readme
 
- Lightweight, beautiful and user-friendly interactive prompts
-_ Easy to use CLI prompts to enquire users for information▌
+ [Prompts](https://github.com/terkelg/prompts#readme) is a Lightweight, beautiful and user-friendly interactive prompts API that let' you enquire user's in your CLI application.
 
  * Simple: prompts has no big dependencies nor is it broken into a dozen tiny modules that only work well together.
  * User friendly: prompt uses layout and colors to create beautiful cli interfaces.
@@ -22,6 +17,8 @@ _ Easy to use CLI prompts to enquire users for information▌
  * Testable: provides a way to submit answers programmatically.
  * Unified: consistent experience across all prompts.
 
+## Dependencies
+- [hxnodejs](https://github.com/HaxeFoundation/hxnodejs)
 
 ## Example
 
