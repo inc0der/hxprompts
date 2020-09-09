@@ -13,11 +13,11 @@ typedef PromptObject<T> = {
 	@:optional
 	var style : String;
 	@:optional
-	dynamic function format(prev:Dynamic, values:{ }, prompt:PromptObject<String>):Void;
+	dynamic function format(value:String):String;
 	@:optional
-	dynamic function validate(prev:Dynamic, values:{ }, prompt:PromptObject<String>):ts.AnyOf3<String, Bool, js.lib.Promise<ts.AnyOf2<String, Bool>>>;
+	dynamic function validate(value:String):Bool;
 	@:optional
-	dynamic function onState(prev:Dynamic, values:{ }, prompt:PromptObject<String>):Void;
+	dynamic function onState(state: State):Void;
 	@:optional
 	var min : Float;
 	@:optional
