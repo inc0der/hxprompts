@@ -1,19 +1,16 @@
 # Haxe Externs for prompts
 
 <p align="center">
-  <img src="https://github.com/terkelg/prompts/raw/master/prompts.png" alt="Prompts" width="500" href="https://github.com/terkelg/prompts" />
+  <img src="logo.png" alt="Prompts" width="500" href="https://github.com/terkelg/prompts" />
 </p>
 
-Generated from **[@types/prompts v2.0.8](https://github.com/DefinitelyTyped/DefinitelyTyped#readme)** by **[dts2hx](https://github.com/haxiomic/dts2hx)**
+Generated from **[@types/prompts v2.0.8](https://github.com/DefinitelyTyped/DefinitelyTyped#readme)** by **[dts2hx](https://github.com/haxiomic/dts2hx)** modified and maintained by [@inc0der](https://github.com/inc0der) for use in [@LunaTechsDev](https://github.com/LunatechsDev/) organization
 
-## Dependencies
-- hxnodejs
+**Still in early development and may have inconsistencies**
 
 ## What is Prompts?
-GitHub: https://github.com/terkelg/prompts#readme
 
- Lightweight, beautiful and user-friendly interactive prompts
-_ Easy to use CLI prompts to enquire users for information▌
+ [Prompts](https://github.com/terkelg/prompts#readme) is a Lightweight, beautiful and user-friendly interactive prompts API that let' you enquire user's in your CLI application.
 
  * Simple: prompts has no big dependencies nor is it broken into a dozen tiny modules that only work well together.
  * User friendly: prompt uses layout and colors to create beautiful cli interfaces.
@@ -22,6 +19,8 @@ _ Easy to use CLI prompts to enquire users for information▌
  * Testable: provides a way to submit answers programmatically.
  * Unified: consistent experience across all prompts.
 
+## Dependencies
+- [hxnodejs](https://github.com/HaxeFoundation/hxnodejs)
 
 ## Example
 
@@ -30,11 +29,26 @@ import prompts.Prompter;
 
 class GuidedSetup {
   public static function main() {
-    Prompter.call({
-      type: 'text',
-      name: 'dish',
-      message: 'Do you like pizza?'
-    });
+    Prompter.call([
+    {
+       type: 'text',
+       name: 'cwd',
+       message: 'Where would you like to create the project?',
+       initial: './',
+       format: (v) -> Path.resolve(v)
+     },
+     {
+       type: 'text',
+       name: 'projectName',
+       message: 'Project name',
+       initial: 'generated-project'
+     },
+    ]).then((answers: Dynamic) -> {
+      if (!FileSystem.exists(answers.cwd)) {
+        FileSystem.createDirectory(answers.cwd);
+        Sys.setCwd(answers.cwd);
+      }
+    })
   }
 }
 ```
