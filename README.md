@@ -6,6 +6,8 @@
 
 Generated from **[@types/prompts v2.0.8](https://github.com/DefinitelyTyped/DefinitelyTyped#readme)** by **[dts2hx](https://github.com/haxiomic/dts2hx)** modified and maintained by [@inc0der](https://github.com/inc0der) for use in [@LunaTechsDev](https://github.com/LunatechsDev/) organization
 
+**Still in early development and may have inconsistencies**
+
 ## What is Prompts?
 
  [Prompts](https://github.com/terkelg/prompts#readme) is a Lightweight, beautiful and user-friendly interactive prompts API that let' you enquire user's in your CLI application.
@@ -27,11 +29,26 @@ import prompts.Prompter;
 
 class GuidedSetup {
   public static function main() {
-    Prompter.call({
-      type: 'text',
-      name: 'dish',
-      message: 'Do you like pizza?'
-    });
+    Prompter.call([
+    {
+       type: 'text',
+       name: 'cwd',
+       message: 'Where would you like to create the project?',
+       initial: './',
+       format: (v) -> Path.resolve(v)
+     },
+     {
+       type: 'text',
+       name: 'projectName',
+       message: 'Project name',
+       initial: 'generated-project'
+     },
+    ]).then((answers: Dynamic) -> {
+      if (!FileSystem.exists(answers.cwd)) {
+        FileSystem.createDirectory(answers.cwd);
+        Sys.setCwd(answers.cwd);
+      }
+    })
   }
 }
 ```
