@@ -1,3 +1,3 @@
 package prompts;
 
-typedef PrevCaller<T, R> = (prev:Dynamic, values:{ }, prompt:PromptObject<String>) -> R;
+typedef PrevCaller<T, R> = (prev:Dynamic, values: Dynamic, prompt:PromptObject<String>) -> R;
